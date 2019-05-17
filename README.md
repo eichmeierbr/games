@@ -2,10 +2,12 @@
 
 From time to time I think of games that can readily be automated. This repository contains several AIs and game aids to various card and board games. I look forward to updating the repository as I enjoy more games with my friends and family.
 
-## Pirate's Dice (Liar's Dice)
+[Pirate's Dice](#pirates-dice)
+
+## Pirates Dice
 
 ### Introduction and Rules
-This is a simple betting game I first saw in Pirate's of the Carribean 2: Dead Man's Chest.  The game begins with each player secretly rolling 5 dice. A round consists of players sequentially predicting and betting on the number of dice of a particular value on the table. When a player believes the previous bet is incorrect, they 'call' the bet and everybody reveals their dice. Whichever of the two players incorrectly predicted the bet loses a dice. Rounds are repeated until only a single play has remaining dice. A more thorough ruleset can be found here: https://en.wikipedia.org/wiki/Liar%27s_dice
+This is a simple betting game I first saw in Pirate's of the Carribean 2: Dead Man's Chest.  The game begins with each player secretly rolling 5 dice. A round consists of players sequentially predicting and betting on the number of dice of a particular value on the table. When a player believes the previous bet is incorrect, they 'call' the bet and everybody reveals their dice. Whichever of the two players incorrectly predicted the bet loses a dice. Rounds are repeated until only a single play has remaining dice. A more thorough ruleset can be found here: [Game Rules](https://en.wikipedia.org/wiki/Liar%27s_dice)
 
 ### Implementation
 My program currently aids the user by calculating the probability of each bet being succesful. It begins by asking the number of players in the game and the number of beginning dice given to each player. Then, the user may select whether or not to include their own dice in the probability calculations. Including the known dice values increases accuracy, but can be tedious during play. Then the program conducts a round by inputting known dice values and calculating bet success probability.
