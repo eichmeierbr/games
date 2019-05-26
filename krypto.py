@@ -2,15 +2,33 @@
 
 import random
 
-deck = [1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9]#, 10, 10, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+
+# class krypto:
+
+deck = [1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+    
+
+def getNumsFromResponse(input):
+    input+=' '
+    guessHand = []
+    digitList = []
+    for char in input:
+        if(char.isdigit()):
+            digitList.append(char)
+        elif(digitList):
+            num = int(''.join(digitList),10)
+            guessHand.append(num)
+            digitList = []
+
+    return guessHand
+
+
 
 def usesFullHand(input, hand_true):
     guessHand=[]
     hand = hand_true[:]
     # Extract all digits from input string .... This part breaks with double digit numbers
-    for char in input:
-        if(char.isdigit()):
-            guessHand.append(int(char,10))
+    guessHand= getNumsFromResponse(input)
 
     # Sort lists to facilitate comparison
     hand.sort()
@@ -22,7 +40,7 @@ def usesFullHand(input, hand_true):
         informWhyBad(guessHand, hand)
         return False
     
-    
+
 def informWhyBad(guess, hand):
     print '\nYou entered an invalid input'
 
@@ -58,8 +76,6 @@ def initiateRound():
     goal = deck[5]
     return hand, goal
 
-
-
 def turn():
     hand, goal = initiateRound()
     solved = False
@@ -68,9 +84,9 @@ def turn():
         response = getInput(hand, goal)
         solved = (eval(response) == goal)
         if(not solved):
-            print 'That is Incorrect. Try again!\n'
+            print '\nThat is Incorrect. Try again!\n'
 
-    print 'That is Correct! Congratulations!'
+    print '\nThat is Correct! Congratulations!'
 
 
 
