@@ -4,7 +4,9 @@ From time to time I think of games that can readily be automated. This repositor
 
 [Pirate's Dice](#pirates-dice)
 
-[Krypto](#krypto)
+[Pirate's Dice](https://github.com/eichmeierbr/games/tree/master/pirates)
+
+[Krypto](https://github.com/eichmeierbr/games/tree/master/krypto)
 
 ## Pirates Dice
 
