@@ -4,6 +4,8 @@ From time to time I think of games that can readily be automated. This repositor
 
 [Pirate's Dice](#pirates-dice)
 
+[Krypto](#krypto)
+
 ## Pirates Dice
 
 ### Introduction and Rules
@@ -30,3 +32,13 @@ My program currently aids the user by calculating the probability of each bet be
       1) This program is close to having a computer player. AI opponents will increase bets when the liklihood of the previous bet is above 50%. Then, the AI must have logic to select the next bet. 
   3) Implement Self-Playing Game
       1) The final improvement is establishing a framework for the user to play an entire game against computer opponents. In addition to the previous steps, a computerized game would create multiple opponents, and better facilitate playing rounds.
+
+
+## Krypto
+
+### Introduction and Rules
+Growing up, my school district had a math and science olympiad for the elementary schools. This event had several students from each school grades 4-6 compete in STEM games. Every year, I was selected to compete in Krypto. In Krypto, players recieves a hand of five cards with values ranging from 1 to 25.  They use this hand to arithmetically acheive a six card which is set as the "goal".  A more thorough ruleset can be found here: [Game Rules](https://en.wikipedia.org/wiki/Krypto_(game))
+
+### Implementation
+
+### Future Work
